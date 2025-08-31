@@ -5895,8 +5895,8 @@ HaveStatement:
     End Function
     'LC Parse the script files
     Private Function ParseScriptFile() As ScriptBlock
-        Dim Statements As List(Of Statement) = New List(Of Statement)()
-        Dim ColonLocations As List(Of Location) = New List(Of Location)()
+        Dim Statements As New List(Of Statement)()
+        Dim ColonLocations As New List(Of Location)()
         Dim Terminator As Token
         Dim Start As Token
         Dim StatementsEnd As Location

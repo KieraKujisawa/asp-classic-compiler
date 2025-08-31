@@ -4,11 +4,8 @@ using System.Text;
 using Microsoft.Scripting.Runtime;
 
 using System.Dynamic;
-#if USE35
-using Microsoft.Scripting.Ast;
-#else
+using Microsoft.Scripting;
 using System.Linq.Expressions;
-#endif
 
 namespace Dlrsoft.VBScript.Runtime
 {
@@ -29,13 +26,12 @@ namespace Dlrsoft.VBScript.Runtime
 
         public override bool TryGetMember(GetMemberBinder binder, out object result)
         {
-            return _scope.TryGetVariable(SymbolTable.StringToCaseInsensitiveId(binder.Name),
-                                     out result);
+            result = $"You accessed the property: {binder.Name}";
+            return true;
         }
 
         public override bool TrySetMember(SetMemberBinder binder, object value)
         {
-            _scope.SetVariable(SymbolTable.StringToId(binder.Name), value);
             return true;
         }
     }

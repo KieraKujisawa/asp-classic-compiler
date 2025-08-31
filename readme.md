@@ -1,25 +1,15 @@
+# ASP Classic Compiler
+
+## Update
+
+2025-08-31:
+
+This project has been forked / resurrected to support some classic ASP sites that are in the middle of migration to ASP.NET Core.  I find projects that help maintain legacy compatibility on modern hardware to be useful.
+
 # Project Description
-**This project is no longer actively maintained.**
 
 ASP Classic Compiler contains a VBScript compiler. It compiles ASP classic pages into a .NET Intermediate Language (IL) so that they can run inside the ASP.NET environment. This project allows ASP classic pages to coexist
-with ASP.net pages so that ASP Classic site owners can migrate to ASP.net page by page. As there are few ASP classic sites left, this project is no longer active. I had lots of fun working on the project, amongst them:
-
-- The project used ideas like call site caching (also called polymophic inline cache). It is about twice as fast as Microsoft VBScript interpreter.
-- I also experimented with type inference and applied it to string concatenation, something often seen in ASP classic code, using StringBuilder. The result is that some pages render hundreds times faster.
-- I was awarded Microsoft ASP.NET MVP 4 times from 2010-2014 and got to chance to meet many new people and make new friends.
-
-- 3/30/2014 Converted the source control from Mercurial to Git. Added examples on DateTime usage.
-- 4/10/2011 Uploaded unit testing framework. Documents to appear in my blog.
-- **3/29/2011. Open the source code under the Apache 2.0 license. See [announcements](http://weblogs.asp.net/lichen/archive/2011/03/30/asp-classic-compiler-is-now-open-source.aspx).**
-- Build 0.6.2.34834 uploaded on 04/04/2010. Fixed a few bugs. See [History](docs/History.md) for more details.
-- Build 0.6.1.34834 uploaded on 03/27/2010. Fixed a few bugs.
-- Build 0.6.0.34834 uploaded on 12/18/2009. It works with FMStocks 1.0 now. See [this blog entry](http://weblogs.asp.net/lichen/archive/2009/12/20/asp-classic-compiler-0-6-0-released-it-can-run-fmstocks-1-0.aspx) for more details
-- Build 0.5.7.34834 uploaded on 12/03/2009. Fixed numerous little bugs.
-- Build 0.5.6.34834 uploaded on 11/30/2009. Fixed numerous little bugs.
-- Build 0.5.5.34834 uploaded on 11/16/2009. This version has significant enhancements on error reporting.
-- Build 0.5.4.34834 uploaded on 11/2/2009. Built with DLR 0.92. VS2010 and Silverlight build are available now.
-- Build 0.5.3.32871 uploaded on 10/25/2009. This build supports Windows Azure, variable initializer and extension operators.
-- Build 0.5.2.32072 uploaded on 10/17/2009. This build supports using asp classic compiler as an ASP.NET MVC ViewEngine.
+with ASP.net pages so that ASP Classic site owners can migrate to ASP.net page by page. 
 
 # Project Detail
 
