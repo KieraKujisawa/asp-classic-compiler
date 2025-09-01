@@ -21,6 +21,11 @@
     <OutputPath>..\bin\Release40\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
     <PackageReference Include="Microsoft.AspNet.Razor" Version="3.3.0" />
     <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.3.0" />
@@ -33,7 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Interop.ASPTypeLibrary">
-      <HintPath>..\library\40\Interop.ASPTypeLibrary.dll</HintPath>
+      <HintPath>..\..\library\Interop.ASPTypeLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Dynamic">
       <HintPath>..\library\40\Microsoft.Dynamic.dll</HintPath>
@@ -42,8 +47,5 @@
       <HintPath>..\library\40\Microsoft.Scripting.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

@@ -12,32 +12,8 @@
     <RootNamespace>Dlrsoft.VBScript.Parser</RootNamespace>
     <StartupObject>VBParser.(None)</StartupObject>
     <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
     <MapFileExtensions>true</MapFileExtensions>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\bin\Debug\</OutputPath>
-    <DocumentationFile>Dlrsoft.VBParser.xml</DocumentationFile>
-    <BaseAddress>285212672</BaseAddress>
-    <ConfigurationOverrideFile></ConfigurationOverrideFile>
-    <DefineConstants></DefineConstants>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
-    <CodeAnalysisRules></CodeAnalysisRules>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\bin\Release40\</OutputPath>
-    <DocumentationFile>Dlrsoft.VBParser.xml</DocumentationFile>
-    <BaseAddress>285212672</BaseAddress>
-    <ConfigurationOverrideFile></ConfigurationOverrideFile>
-    <DefineConstants></DefineConstants>
-    <DefineDebug>false</DefineDebug>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <NoWarn>42016,42017,42018,42019,42032,42099,42104,42353</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Update="System">

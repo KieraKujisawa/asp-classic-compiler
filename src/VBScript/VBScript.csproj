@@ -17,18 +17,21 @@
     <OutputPath>..\bin\Release40\</OutputPath>
     <DefineConstants>TRACE;</DefineConstants>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DynamicLanguageRuntime" Version="1.3.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Parser\Parser.vbproj" />
   </ItemGroup>
+
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <Reference Include="Microsoft.VisualBasic" />
   </ItemGroup>
 </Project>
