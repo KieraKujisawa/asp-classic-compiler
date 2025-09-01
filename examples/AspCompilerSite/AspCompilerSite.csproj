@@ -1,31 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>
+    </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{24BF0EA3-2D82-4E85-B13D-EA9279F58812}</ProjectGuid>
+    <ProjectGuid>{28E875F4-ACCD-441E-A7E3-4793E81C2419}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AspWebApp</RootNamespace>
-    <AssemblyName>AspWebApp</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>4.0</OldToolsVersion>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <UseIISExpress>false</UseIISExpress>
-    <IISExpressSSLPort />
+    <RootNamespace>AspCompilerSite</RootNamespace>
+    <AssemblyName>AspCompilerSite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44328</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TargetFrameworkProfile />
-    <Use64BitIISExpress />
     <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,40 +32,48 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Web.Mobile" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="default.htm" />
-    <Content Include="test\byref.asp" />
-    <Content Include="test\byref2.asp" />
-    <Content Include="test\call.asp" />
-    <Content Include="test\BuiltinConstants.asp" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="components\adrot.txt" />
     <Content Include="components\AdRotator.asp" />
     <Content Include="components\BrowserCap.asp" />
@@ -88,34 +93,26 @@
     <Content Include="components\Counters\TOURL.Htm" />
     <Content Include="components\FileSystem.Asp" />
     <Content Include="components\ie.gif" />
+    <Content Include="components\MyTextFile.txt" />
     <Content Include="components\nts_iis.gif" />
     <Content Include="components\PermissionCheck.Asp" />
     <Content Include="components\Tiprot.Txt" />
     <Content Include="components\Tools.Asp" />
-    <Content Include="test\datetest.asp" />
-    <Content Include="test\extension.asp" />
-    <Content Include="test\ifnull.asp" />
-    <Content Include="test\imports.asp" />
-    <Content Include="test\StringBuilder.asp" />
-    <Content Include="test\with.asp" />
     <Content Include="Database\AddDelete.asp" />
     <Content Include="Database\adovbs.inc" />
-    <Content Include="Database\Authors.mdb">
-    </Content>
+    <Content Include="Database\Authors.mdb" />
     <Content Include="Database\Blob.Asp" />
     <Content Include="Database\LimitRows.asp" />
     <Content Include="Database\MultiScrolling.asp" />
     <Content Include="Database\SimpleQuery.asp" />
     <Content Include="Database\StoredProcedures.asp" />
     <Content Include="Database\Update.asp" />
-    <Content Include="test\perftest2.asp" />
-    <Content Include="test\datatypes.asp" />
-    <Content Include="test\forloop.asp" />
-    <Content Include="test\function.asp" />
-    <Content Include="test\if.asp" />
-    <Content Include="test\literals.asp" />
-    <Content Include="test\perftest.asp" />
-    <Content Include="test\servervars.asp" />
+    <Content Include="default.htm" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="libman.json" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Simple\Arrays.asp" />
     <Content Include="Simple\Components.Asp" />
     <Content Include="Simple\Conditional.asp" />
@@ -124,22 +121,57 @@
     <Content Include="Simple\Includes.asp" />
     <Content Include="Simple\Looping.asp" />
     <Content Include="Simple\Variables.asp" />
+    <Content Include="test\BuiltinConstants.asp" />
+    <Content Include="test\byref.asp" />
+    <Content Include="test\byref2.asp" />
+    <Content Include="test\call.asp" />
+    <Content Include="test\datatypes.asp" />
+    <Content Include="test\datetest.asp" />
+    <Content Include="test\extension.asp" />
+    <Content Include="test\forloop.asp" />
+    <Content Include="test\function.asp" />
+    <Content Include="test\if.asp" />
+    <Content Include="test\ifnull.asp" />
+    <Content Include="test\imports.asp" />
+    <Content Include="test\literals.asp" />
+    <Content Include="test\perftest.asp" />
+    <Content Include="test\perftest2.asp" />
+    <Content Include="test\servervars.asp" />
+    <Content Include="test\StringBuilder.asp" />
+    <Content Include="test\with.asp" />
     <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_Start\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\asp\Asp.csproj">
-      <Project>{F076A2D0-5200-42D7-9AEA-9E1260EFB138}</Project>
-      <Name>Asp.VS2013</Name>
+    <PackageReference Include="Antlr" Version="3.5.0.2" />
+    <PackageReference Include="bootstrap" Version="5.2.3" />
+    <PackageReference Include="jQuery" Version="3.7.0" />
+    <PackageReference Include="jQuery.Validation" Version="1.19.5" />
+    <PackageReference Include="Microsoft.AspNet.Web.Optimization" Version="1.1.3" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Validation" Version="3.2.11" />
+    <PackageReference Include="Microsoft.Web.Infrastructure" Version="2.0.0" />
+    <PackageReference Include="Modernizr" Version="2.8.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WebGrease" Version="1.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\asp\Asp.csproj">
+      <Project>{f076a2d0-5200-42d7-9aea-9e1260efb138}</Project>
+      <Name>Asp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\PublishProfiles\AspClassicCompiler.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -148,23 +180,18 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3465</DevelopmentServerPort>
+          <DevelopmentServerPort>65389</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>https://localhost:44328/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -174,4 +201,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
 </Project>
